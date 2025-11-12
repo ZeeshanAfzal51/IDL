@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Indian Dynamics - Leading provider of end-to-end infrastructure surveying solutions using advanced drone technology and GIS platforms">
+    <meta name="keywords" content="drone surveying, orthomosaic mapping, GIS solutions, infrastructure projects, aerial surveying">
+    <title>Indian Dynamics | Advanced Drone Surveying & GIS Solutions</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Three.js Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-drone"></i> Indian Dynamics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Next-Gen Infrastructure <span class="gradient-text">Surveying Solutions</span></h1>
+                    <p class="hero-subtitle">Transforming project planning with precision drone technology, orthomosaic mapping, and custom GIS platforms</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3 id="accuracy-stat">2.5cm</h3>
+                            <p>Accuracy</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 id="market-stat">₹2,578M</h3>
+                            <p>India Drone Market by 2033</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 id="projects-stat">2+</h3>
+                            <p>Major Projects</p>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+                        <a href="#projects" class="btn btn-outline-light btn-lg">View Projects</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800" alt="Drone Survey" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Market Insights Section -->
+    <section id="market-insights" class="section-padding bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Industry <span class="gradient-text">Insights</span></h2>
+                    <p class="section-subtitle">The future of drone surveying in India</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>20.4% CAGR</h3>
+                        <p>India's drone market expected to reach $4.8 billion by 2030</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>21.9% Growth</h3>
+                        <p>Drone surveying market in India growing fastest globally (2025-2035)</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="insight-card">
+                        <div class="insight-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h3>Infrastructure Focus</h3>
+                        <p>Most remunerative segment driven by urbanization & smart cities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800" alt="Team" class="img-fluid rounded-3 shadow-lg">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title">Pioneering <span class="gradient-text">Precision</span> in Surveying</h2>
+                    <p class="lead">Indian Dynamics delivers end-to-end infrastructure project surveying solutions, from pre-bid aerial surveying to creating orthomosaic models for technical submissions.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Proven Track Record</h4>
+                                <p>Successfully facilitated Kalpataru Projects in winning 2 critical infrastructure projects</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cutting-Edge Technology</h4>
+                                <p>Integration of LiDAR sensors, thermal imaging, and real-time GIS platforms</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cost Efficiency</h4>
+                                <p>Reducing third-party dependencies, saving up to ₹12 lakhs annually for clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+                    <p class="section-subtitle">Comprehensive surveying solutions for infrastructure projects</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
+                        <h3>Pre-Bid Aerial Surveying</h3>
+                        <p>High-precision drone flights with integrated sensors for accurate site assessment and cost estimation</p>
+                        <ul class="service-list">
+                            <li>Ground Control Point setup</li>
+                            <li>DGCA-compliant operations</li>
+                            <li>Multi-sensor integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Orthomosaic Modeling</h3>
+                        <p>Create surveyor-grade 3D models with 2.5cm accuracy for technical submissions and project planning</p>
+                        <ul class="service-list">
+                            <li>Agisoft Metashape processing</li>
+                            <li>Digital Elevation Models (DEM)</li>
+                            <li>High-resolution outputs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Periodic Project Monitoring</h3>
+                        <p>Monthly aerial surveys to track construction progress and ensure timeline adherence</p>
+                        <ul class="service-list">
+                            <li>Progress documentation</li>
+                            <li>Comparative analysis</li>
+                            <li>Real-time reporting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h3>Custom GIS Platform</h3>
+                        <p>Kalpa-Surveksha: In-house GIS dashboard for storing, sharing, and analyzing critical project data</p>
+                        <ul class="service-list">
+                            <li>Leaflet.js & CesiumJS</li>
+                            <li>Cloud-based storage</li>
+                            <li>Interactive 3D visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <h3>Sensor Integration</h3>
+                        <p>Advanced LiDAR and thermal imaging for comprehensive site analysis</p>
+                        <ul class="service-list">
+                            <li>Velodyne VLP-16 LiDAR</li>
+                            <li>FLIR thermal sensors</li>
+                            <li>Real-time data processing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Consulting & Training</h3>
+                        <p>Expert guidance on drone operations, GIS implementation, and regulatory compliance</p>
+                        <ul class="service-list">
+                            <li>DGCA compliance support</li>
+                            <li>Technical training</li>
+                            <li>Workflow optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">Delivering excellence in infrastructure surveying</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="flip-left">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800" alt="Kalpataru Project">
+                            <div class="project-overlay">
+                                <h3>Kalpataru Projects International</h3>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Major Infrastructure Projects</h3>
+                            <p><strong>Client:</strong> Kalpataru Projects International Limited</p>
+                            <p><strong>Services:</strong> Pre-bid surveying, orthomosaic modeling, periodic monitoring</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-check-double"></i>
+                                    <span>2 Projects Won</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>2.5cm Accuracy</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-piggy-bank"></i>
+                                    <span>₹12L Savings/Year</span>
+                                </div>
+                            </div>
+                            <p class="project-description">Successfully deployed end-to-end aerial surveying pipeline with GIS integration, enabling accurate project bidding and ongoing operations management for critical infrastructure projects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="flip-right">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800" alt="Regional Projects">
+                            <div class="project-overlay">
+                                <h3>Central India & Tamil Nadu Operations</h3>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Emerging Infrastructure Companies</h3>
+                            <p><strong>Regions:</strong> Central India, Tamil Nadu</p>
+                            <p><strong>Focus:</strong> Custom GIS solutions, sensor integration, training</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>Multiple Sites</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-users-cog"></i>
+                                    <span>Training Provided</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Ongoing Growth</span>
+                                </div>
+                            </div>
+                            <p class="project-description">Partnering with up-and-coming infrastructure companies to establish modern surveying workflows, reduce third-party dependencies, and build internal GIS capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="section-padding bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Our <span class="gradient-text">Technology Stack</span></h2>
+                    <p class="section-subtitle">Cutting-edge tools for precision surveying</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card">
+                        <i class="fas fa-helicopter tech-icon"></i>
+                        <h4>Hardware</h4>
+                        <ul>
+                            <li>Asteria Aerospace A200 Geo Drone</li>
+                            <li>Velodyne VLP-16 LiDAR</li>
+                            <li>FLIR Vue TZ20 Thermal</li>
+                            <li>ESP32 NodeMCU</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-card">
+                        <i class="fas fa-laptop-code tech-icon"></i>
+                        <h4>Software</h4>
+                        <ul>
+                            <li>Agisoft Metashape</li>
+                            <li>Leaflet.js</li>
+                            <li>CesiumJS</li>
+                            <li>OpenStreetMap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-card">
+                        <i class="fas fa-cloud tech-icon"></i>
+                        <h4>Platform</h4>
+                        <ul>
+                            <li>Google Firebase</li>
+                            <li>Spectra Insights</li>
+                            <li>Kalpa-Surveksha</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-card">
+                        <i class="fas fa-cogs tech-icon"></i>
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C++</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="section-subtitle">Let's discuss your next infrastructure project</p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <h4>CEO</h4>
+                                <p>Zeeshan Afzal</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:zeeshan.afzal@indiandynamics.in">zeeshan.afzal@indiandynamics.in</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Serving</h4>
+                                <p>Central India, Tamil Nadu & Pan-India Operations</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form id="contact-form" class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select">
+                                <option>Service Interest</option>
+                                <option>Pre-Bid Surveying</option>
+                                <option>Orthomosaic Modeling</option>
+                                <option>Project Monitoring</option>
+                                <option>Custom GIS Platform</option>
+                                <option>Consulting & Training</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Project Details"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3><i class="fas fa-drone"></i> Indian Dynamics</h3>
+                    <p>Leading provider of end-to-end infrastructure surveying solutions using advanced drone technology and GIS platforms.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Contact</h4>
+                    <p>Email: zeeshan.afzal@indiandynamics.in</p>
+                    <p>Serving: Central India & Tamil Nadu</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Indian Dynamics. All rights reserved. | Pioneering Precision in Infrastructure Surveying</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
